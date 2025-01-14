@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, ChevronLeft, Heart, MapPin } from "lucide-react";
+import {
+  Calendar,
+  ChevronLeft,
+  ChevronsRight,
+  Heart,
+  MapPin,
+} from "lucide-react";
 
 const Event: React.FC = () => {
   return (
@@ -15,7 +21,7 @@ const Event: React.FC = () => {
       <div className="flex flex-col w-full rounded-t-3xl bg-white items-center p-6">
         <div className="w-full">
           <p className="font-semibold text-lg">Neckdeep Tour 2022</p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-2">
             <div className="flex gap-2 text-gray-300">
               <MapPin />
               <p>Yogyakarta</p>
@@ -35,7 +41,15 @@ const Event: React.FC = () => {
             etiam tellus suscipit condimentum at inceptos
           </p>
         </div>
-        <div className="w-full h-16 rounded-full bg-blue-400 mt-16"></div>
+        <div className="flex w-full rounded-full bg-blue-400 mt-16 items-center p-2">
+          <div className="flex h-12 w-12 bg-white rounded-full items-center justify-center">
+            <ChevronsRight />
+          </div>
+          <div className="flex justify-center items-center flex-1 h-12 font-semibold text-white text-lg">
+            Buy Ticket - $63
+          </div>
+          <div className="flex h-12 w-12"></div>
+        </div>
       </div>
     </div>
   );
