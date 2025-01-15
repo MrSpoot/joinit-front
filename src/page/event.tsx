@@ -6,12 +6,21 @@ import {
   Heart,
   MapPin,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Event: React.FC = () => {
+  const navigate = useNavigate();
   return (
-    <div className="flex flex-col h-full w-full bg-green-400">
+    <div className="flex flex-col h-full w-full bg-green-400 bg-cover bg-center bg-[url('https://www.electro-world.fr/img/public/mainstage-tomorrowland-2019659792.jpg')]">
       <div className="w-full flex-1 p-4 flex justify-between">
-        <Button variant={"outline"} size={"icon"} className="rounded-full">
+        <Button
+          variant={"outline"}
+          size={"icon"}
+          className="rounded-full"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
           <ChevronLeft />
         </Button>
         <Button variant={"outline"} size={"icon"} className="rounded-full">
